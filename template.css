@@ -57,6 +57,60 @@ body{
 	font-size: 14px;	
 }
 
+.header_nav.active{
+	display: block;
+}
+
+.nav_toggle{
+	display: none;
+	 outline: none;
+
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	z-index: 1;
+	width: 30px;
+
+	font-size: 0;
+	background-color: transparent;
+	color: transparent;
+	cursor: pointer;
+	border: 0;
+}
+
+.nav_toggle_item{
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #82868f;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;	
+}
+
+.nav_toggle_item:before,
+.nav_toggle_item:after{
+	content: "";
+	width: 100%;
+	height: 3px;
+	position: absolute;
+	background-color: #82868f;
+	left: 0;
+	z-index: 1;
+}
+
+.nav_toggle_item:before{
+	top: -8px;
+}
+
+.nav_toggle_item:after{
+	bottom: -8px;
+}
+
 .nav_link{
 	text-decoration: none;
 	color: #82868f;
@@ -91,8 +145,7 @@ body{
 
 /*Title*/
 .title {
-	padding-top: 80px;
-	margin: 0px 0 40px 0;
+	padding: 80px 0 40px;
 	color: #0ebfdd;
 	font-size: 44px;
 }
@@ -156,6 +209,7 @@ body{
 
 .stat{
 	display: flex;	
+	flex-wrap: wrap;
 }
 
 .stat_item{
@@ -277,8 +331,119 @@ body{
 }
 
 
+@media (max-width: 990px){
+	.container{
+		max-width: 650px;
+	}
 
+	.nav_link{
+		padding: 10px 15px;
+	}
 
+	.team{
+		height: 500px;
+	}
 
+	.team_img{
+		margin: 50px auto;
+	}
+
+	.stat{
+		justify-content: center;
+	}
+
+	.stat_item{
+		flex: none;
+		width: 33%;
+		border: 0;
+
+		padding: 50px 25px;
+	}
+
+	.stat_item:last-child{		
+		border-right: 0;
+	}
+
+	.stat_count{
+		font-size: 60px;
+	}
+}
+
+@media (max-width: 670px){
+	.header_nav{
+		display: none;
+
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+
+		background-color: #0ebfdd;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+		padding: 20px 0;
+	}
+
+	.nav_link{
+		color: #fff;
+	}
+
+	.nav_toggle{
+		display: block;
+	}
+
+	.stat_item{
+		padding: 40px 25px;
+	}
+
+	.f_text{
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 550px){
+
+	.nav_link{
+		display: block;
+		padding: 5px 10px;
+	}
+
+	.title{
+		padding: 30px 0;
+	}
+
+	.subtitle{
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	.team{
+		height: 300px;
+		font-size: 16px;
+	}
+
+	.team_title{
+		font-size: 26px;
+	}
+
+	.team_img{
+		margin: 20px auto;
+	}
+
+	.team_img img{
+		width: 100px;
+	}
+
+	.btn{
+		padding: 5px 15px;
+	}
+
+	.stat_item{
+		padding: 20px 15px;
+	}
+
+	.stat_count{
+		font-size: 40px;
+	}
+}
 
 

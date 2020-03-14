@@ -37,4 +37,9 @@ $(function(){
 		$("#block").toggleClass("blackout");
 	});
 
+	$("#nav_toggle").on("click", function(){
+		event.preventDefault();
+		$("#header_nav").toggleClass("active");
+	});
+
 });
