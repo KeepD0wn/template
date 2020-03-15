@@ -370,6 +370,11 @@ body{
 }
 
 @media (max-width: 670px){
+
+	.header_logo{
+		margin-left: 20px;
+	}
+
 	.header_nav{
 		display: none;
 
@@ -389,6 +394,10 @@ body{
 
 	.nav_toggle{
 		display: block;
+	}
+
+	.img_1,.img_2,.img_3{
+		width: 180px;
 	}
 
 	.stat_item{
@@ -427,6 +436,10 @@ body{
 
 	.team_img{
 		margin: 20px auto;
+	}
+
+	.img_1,.img_2,.img_3{
+		width: 100px;
 	}
 
 	.team_img img{
